@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+import '../albums.css';
+
 function Albums() {
   const [albums, setAlbums] = useState([]);
   // fetch albums from api
@@ -8,6 +10,7 @@ function Albums() {
     axios
       .get("https://jsonplaceholder.typicode.com/albums")
       .then((response) => {
+        // console.log(JSON.stringify(response.data));
         setAlbums(response.data);
       })
       .catch((error) => {
@@ -21,7 +24,7 @@ function Albums() {
       <ul>
         {albums.map((album) => (
           <li key={album.id}>
-            {album.userId} - {album.title}
+             {album.title}
           </li>
         ))}
       </ul>

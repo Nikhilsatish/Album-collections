@@ -1,0 +1,15 @@
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  list-style-type: none;
+}
+
+li {
+  text-align: center;
+  padding: 6%;
+  margin: 4%;
+  border: 1px solid #000000;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: rgb(253, 232, 97);
+}
